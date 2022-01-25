@@ -77,6 +77,7 @@ const categoryResolver = () => {
   return categoryFromDB;
 };
 
+// Step 3:
 const resolvers = {
   Query: {
     item: itemResolver,
