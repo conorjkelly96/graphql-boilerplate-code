@@ -77,7 +77,7 @@ const categoryResolver = () => {
   return categoryFromDB;
 };
 
-// Step 3:
+// Step 3: Associate resolvers with Queries
 const resolvers = {
   Query: {
     item: itemResolver,
@@ -85,11 +85,13 @@ const resolvers = {
   },
 };
 
+// Step 4: Setup a new instance of a Server using the ApolloServer class
 const server = new ApolloServer({
   typeDefs,
   resolvers,
 });
 
+// Step 5: Start server and check the terminal for the link to your localhost
 server.listen().then(({ url }) => {
   console.log(`🚀  Server ready at ${url}`);
 });
