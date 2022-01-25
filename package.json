@@ -1,7 +1,7 @@
 {
   "name": "graphql-boilerplate-code",
   "version": "1.0.0",
-  "description": "GraphQL Server Boilterplate code.",
+  "description": "GraphQL Server Boilerplate code.",
   "main": "index.js",
   "scripts": {
     "start": "node src/index.js",
