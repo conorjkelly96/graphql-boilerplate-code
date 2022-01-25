@@ -33,6 +33,17 @@ const itemsFromDB = [
   },
 ];
 
+const categoryFromDB = [
+  {
+    id: 1,
+    category: "Menswear",
+  },
+  {
+    id: 2,
+    category: "Womenswear",
+  },
+];
+
 // Step 1: Define schema or type definitions
 const typeDefs = gql`
   type Item {
@@ -43,9 +54,15 @@ const typeDefs = gql`
     quantity: Int
   }
 
+  type Category {
+    id: Int
+    category: String
+  }
+
   type Query {
     # all your queries here
     item: [Item]
+    category: [Category]
   }
 `;
 
@@ -55,9 +72,15 @@ const itemResolver = () => {
   return itemsFromDB;
 };
 
+const categoryResolver = () => {
+  // return value should respect schema
+  return categoryFromDB;
+};
+
 const resolvers = {
   Query: {
     item: itemResolver,
+    category: categoryResolver,
   },
 };
 

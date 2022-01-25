@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node src/index.js",
-    "dev": "node src/index.js"
+    "dev": "nodemon src/index.js"
   },
   "scriptsComments": {
     "start": "Runs development build on a local server configured by index.js"
