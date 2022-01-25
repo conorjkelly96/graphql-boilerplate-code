@@ -4,14 +4,24 @@
   "description": "GraphQL Server Boilterplate code.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/index.js",
+    "dev": "node src/index.js"
+  },
+  "scriptsComments": {
+    "start": "Runs development build on a local server configured by index.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/conorjkelly96/graphql-boilerplate-code.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "graphql",
+    "server",
+    "nodejs",
+    "backend",
+    "javascript"
+  ],
+  "author": "Conor Kelly",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/conorjkelly96/graphql-boilerplate-code/issues"
@@ -20,5 +30,11 @@
   "dependencies": {
     "apollo-server": "^3.6.2",
     "graphql": "^16.2.0"
+  },
+  "dependenciesComments": {
+    "comment": "The basic server setup for Apollo GraphQL servers requires you to install apollo-server and graphql npm packages"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
   }
 }
