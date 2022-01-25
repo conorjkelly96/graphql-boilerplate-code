@@ -18,4 +18,4 @@ Apollo GraphQL official has released a step by step server guide, which can be f
 
 ## Contributing
 
-The GraphQL boilerplates are maintained by the GraphQL community, with official support from the [Apollo](https://blog.apollographql.com/) & [Prisma / Graphcool](https://prisma.io/blog) teams.
+The GraphQL boilerplates are maintained by the GraphQL community, with official support from the [Apollo](https://blog.apollographql.com/) teams.
