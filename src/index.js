@@ -1,4 +1,4 @@
-// Ensure the installation dependencies are imported into the main index.js/server.js file
+// Step 1: Ensure the installation dependencies are imported into the main index.js/server.js file
 const { ApolloServer, gql } = require("apollo-server");
 
 // Optional: for testing purposes, an array can be used as mock data for your schema setup.
@@ -44,7 +44,7 @@ const categoryFromDB = [
   },
 ];
 
-// Step 1: Define schema or type definitions
+// Step 2: Define schema or type definitions
 const typeDefs = gql`
   type Item {
     id: Int
@@ -66,7 +66,7 @@ const typeDefs = gql`
   }
 `;
 
-// Step 2: Define your resolvers
+// Step 3: Define your resolvers
 const itemResolver = () => {
   // return value should respect schema
   return itemsFromDB;
@@ -77,7 +77,7 @@ const categoryResolver = () => {
   return categoryFromDB;
 };
 
-// Step 3: Associate resolvers with Queries
+// Step 4: Associate resolvers with Queries
 const resolvers = {
   Query: {
     item: itemResolver,
@@ -85,13 +85,13 @@ const resolvers = {
   },
 };
 
-// Step 4: Setup a new instance of a Server using the ApolloServer class
+// Step 5: Setup a new instance of a Server using the ApolloServer class
 const server = new ApolloServer({
   typeDefs,
   resolvers,
 });
 
-// Step 5: Start server and check the terminal for the link to your localhost
+// Step 6: Start server and check the terminal for the link to your localhost
 server.listen().then(({ url }) => {
   console.log(`🚀  Server ready at ${url}`);
 });
